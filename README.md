@@ -9,7 +9,7 @@
 
 This application converts spoken Vietnamese into text without the need for an internet connection, ensuring privacy and accessibility for all users. Its aim is to provide a tool for real-world accessibility challenges, ensuring that users, regardless of their typing proficiency, can communicate efficiently and privately.
 
-## ## 📜 About Gemma 3n
+## 📜 About Gemma 3n
 
 **Gemma 3n** is Google's cutting-edge multimodal AI model, optimized for on-device applications. It supports real-time processing of audio, text, and images, making it ideal for offline applications like **Talk2TextVN**. 
 
