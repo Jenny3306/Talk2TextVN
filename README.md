@@ -21,6 +21,7 @@ Talk2TextVN is an **on-device Vietnamese speech recognition system** designed fo
 ---
 
 ## 🏗️ System Architecture
+```
 talk2textvn/
 ├── audio_io.py          # Audio recording and loading
 ├── preprocess.py        # Audio preprocessing pipeline
@@ -39,7 +40,7 @@ talk2textvn/
 ├── recordings/          # Recorded audio files
 ├── .env.example         # API key template
 └── requirements.txt     # Dependencies
-
+```
 ---
 
 ## ⚙️ Configuration
