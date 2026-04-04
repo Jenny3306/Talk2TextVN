@@ -260,9 +260,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ---
 
 ## 👤 Author
-
-<<<<<<< HEAD
 **Jenny3306** · [github.com/Jenny3306](https://github.com/Jenny3306)
-=======
-**Jenny3306** · [github.com/Jenny3306](https://github.com/Jenny3306)
->>>>>>> bf7fe3279592f6b0a962b53e627429d209f9c038
