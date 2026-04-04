@@ -1,0 +1,11 @@
+file,reference,raw_text,cleaned_rule,cleaned_gemma,wer_raw,wer_rule,wer_gemma,cer_raw,latency_s
+sample_01.wav,xin chào hôm nay trời đẹp quá,"xin chào, hôm nay rồi đẹp quá","xin chào, hôm nay rồi đẹp quá.","xin chào, hôm nay trời đẹp quá!",0.2857,0.4286,0.2857,0.1034,0.842
+sample_02.wav,tôi đang học lập trình python,tôi đang hảo bệnh bài phân,tôi đang hảo bệnh bài phân.,tôi đang hảo bệnh bài phân.,0.6667,0.6667,0.6667,0.4828,0.358
+sample_03.wav,dự án này chạy hoàn toàn offline,nhử n 번째 hoàn tình off like citor,nhử n 번째 hoàn tình off like citor.,như n 번째 hoàn thành off like visitor.,1.1429,1.1429,1.1429,0.6875,3.269
+sample_04.wav,hệ thống nhận dạng giọng nói tiếng việt,h<|vi|> d 1920,h<|vi|> d 1920.,hôm nay là 19 tháng 20.,1.0,1.0,1.0,0.8974,10.475
+sample_05.wav,cuộc họp bắt đầu lúc ba giờ chiều,cô hả pắc đào lúc bây giờ chíu.,cô hả pắc đào lúc bây giờ chíu.,cô park dao lúc bây giờ chiếu.,0.75,0.75,0.75,0.4242,0.418
+sample_06.wav,tôi không hiểu tại sao nó bị lỗi,tôi không hiểu tại sao nó bị lỗi,tôi không hiểu tại sao nó bị lỗi.,tôi không hiểu tại sao nó bị lỗi.,0.0,0.125,0.125,0.0,0.341
+sample_07.wav,hôm nay tôi cần hoàn thành báo cáo,hôm nay tôi cần hành thành báo cáo,hôm nay tôi cần hành thành báo cáo.,"hôm nay, tôi cần hành thành báo cáo.",0.125,0.25,0.375,0.0588,0.675
+sample_08.wav,mô hình học máy cần nhiều dữ liệu,mô hình học máy cần như vậy lửa,mô hình học máy cần như vậy lửa.,mô hình học máy cần như vậy lửa.,0.375,0.375,0.375,0.2727,0.729
+sample_09.wav,ứng dụng này bảo vệ quyền riêng tư,có những nàyumental dạy rowoon,có những nàyumental dạy rowoon.,có nhữngumental dạy rowoon.,1.0,1.0,1.0,0.7059,3.661
+sample_10.wav,kết quả thử nghiệm rất khả quan,g gallery th і nầ music à 외,g gallery th і nầ music 외.,g gallery thin music ạ 외.,1.1429,1.0,1.0,0.8387,9.779

@@ -1,0 +1,122 @@
+[
+  {
+    "file": "sample_01.wav",
+    "reference": "xin chào hôm nay trời đẹp quá",
+    "raw_text": "xin chào, hôm nay chào để qua",
+    "cleaned_rule": "xin chào, hôm nay chào để qua.",
+    "cleaned_gemma": "xin chào, hôm nay chào để qua.",
+    "wer_raw": 0.5714,
+    "wer_rule": 0.5714,
+    "wer_gemma": 0.5714,
+    "cer_raw": 0.2759,
+    "latency_s": 3.651
+  },
+  {
+    "file": "sample_02.wav",
+    "reference": "tôi đang học lập trình python",
+    "raw_text": "tôi đang học lập trinh mai tháng",
+    "cleaned_rule": "tôi đang học lập trinh mai tháng.",
+    "cleaned_gemma": "tôi đang học lập trình mai tháng.",
+    "wer_raw": 0.5,
+    "wer_rule": 0.5,
+    "wer_gemma": 0.3333,
+    "cer_raw": 0.2414,
+    "latency_s": 1.018
+  },
+  {
+    "file": "sample_03.wav",
+    "reference": "dự án này chạy hoàn toàn offline",
+    "raw_text": "form này có hơn ether",
+    "cleaned_rule": "form này có hơn ether.",
+    "cleaned_gemma": "form này có hơn ether.",
+    "wer_raw": 0.8571,
+    "wer_rule": 0.8571,
+    "wer_gemma": 0.8571,
+    "cer_raw": 0.6875,
+    "latency_s": 3.905
+  },
+  {
+    "file": "sample_04.wav",
+    "reference": "hệ thống nhận dạng giọng nói tiếng việt",
+    "raw_text": "mapping và khãy hề lập hương",
+    "cleaned_rule": "mapping và khãy hề lập hương.",
+    "cleaned_gemma": "mapping và khãy hề lập hương.",
+    "wer_raw": 1.0,
+    "wer_rule": 1.0,
+    "wer_gemma": 1.0,
+    "cer_raw": 0.7692,
+    "latency_s": 4.395
+  },
+  {
+    "file": "sample_05.wav",
+    "reference": "cuộc họp bắt đầu lúc ba giờ chiều",
+    "raw_text": "cô hợp bắt đầu lúc mẹ về trên",
+    "cleaned_rule": "cô hợp bắt đầu lúc mẹ về trên.",
+    "cleaned_gemma": "cô hợp bắt đầu lúc mẹ về trên.",
+    "wer_raw": 0.625,
+    "wer_rule": 0.625,
+    "wer_gemma": 0.625,
+    "cer_raw": 0.4242,
+    "latency_s": 0.339
+  },
+  {
+    "file": "sample_06.wav",
+    "reference": "tôi không hiểu tại sao nó bị lỗi",
+    "raw_text": "đây không hu climbing h종a bên standing",
+    "cleaned_rule": "đây không hu climbing h종a bên standing.",
+    "cleaned_gemma": "đây không phải là climbing hoàn hảo bên standing.",
+    "wer_raw": 0.875,
+    "wer_rule": 0.875,
+    "wer_gemma": 1.0,
+    "cer_raw": 0.75,
+    "latency_s": 3.902
+  },
+  {
+    "file": "sample_07.wav",
+    "reference": "hôm nay tôi cần hoàn thành báo cáo",
+    "raw_text": "hôm nay tôi còn hoàn thành báo cá quá",
+    "cleaned_rule": "hôm nay tôi còn hoàn thành báo cá quá.",
+    "cleaned_gemma": "hôm nay, tôi còn hoàn thành báo cáo quá.",
+    "wer_raw": 0.375,
+    "wer_rule": 0.375,
+    "wer_gemma": 0.375,
+    "cer_raw": 0.1471,
+    "latency_s": 0.491
+  },
+  {
+    "file": "sample_08.wav",
+    "reference": "mô hình học máy cần nhiều dữ liệu",
+    "raw_text": "bố hành hợp máy công như giữa lệ ớt",
+    "cleaned_rule": "bố hành hợp máy công như giữa lệ ớt.",
+    "cleaned_gemma": "bố hành hợp máy công như giữa lệ ớt.",
+    "wer_raw": 1.0,
+    "wer_rule": 1.0,
+    "wer_gemma": 1.0,
+    "cer_raw": 0.5152,
+    "latency_s": 0.363
+  },
+  {
+    "file": "sample_09.wav",
+    "reference": "ứng dụng này bảo vệ quyền riêng tư",
+    "raw_text": "escucha when chengzi're in abu",
+    "cleaned_rule": "escucha when chengzi're in abu.",
+    "cleaned_gemma": "listen when chengzi is in abu.",
+    "wer_raw": 1.0,
+    "wer_rule": 1.0,
+    "wer_gemma": 1.0,
+    "cer_raw": 0.8824,
+    "latency_s": 5.036
+  },
+  {
+    "file": "sample_10.wav",
+    "reference": "kết quả thử nghiệm rất khả quan",
+    "raw_text": "ta to rubber to l",
+    "cleaned_rule": "ta to rubber to l.",
+    "cleaned_gemma": "ta to rubber to l.",
+    "wer_raw": 1.0,
+    "wer_rule": 1.0,
+    "wer_gemma": 1.0,
+    "cer_raw": 0.7742,
+    "latency_s": 2.866
+  }
+]

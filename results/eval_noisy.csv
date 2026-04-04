@@ -1,0 +1,11 @@
+file,reference,raw_text,cleaned_rule,cleaned_gemma,wer_raw,wer_rule,wer_gemma,cer_raw,latency_s
+sample_01.wav,xin chào hôm nay trời đẹp quá,"xin chào, hôm nay chào để qua","xin chào, hôm nay chào để qua.","xin chào, hôm nay chào để qua.",0.5714,0.5714,0.5714,0.2759,3.651
+sample_02.wav,tôi đang học lập trình python,tôi đang học lập trinh mai tháng,tôi đang học lập trinh mai tháng.,tôi đang học lập trình mai tháng.,0.5,0.5,0.3333,0.2414,1.018
+sample_03.wav,dự án này chạy hoàn toàn offline,form này có hơn ether,form này có hơn ether.,form này có hơn ether.,0.8571,0.8571,0.8571,0.6875,3.905
+sample_04.wav,hệ thống nhận dạng giọng nói tiếng việt,mapping và khãy hề lập hương,mapping và khãy hề lập hương.,mapping và khãy hề lập hương.,1.0,1.0,1.0,0.7692,4.395
+sample_05.wav,cuộc họp bắt đầu lúc ba giờ chiều,cô hợp bắt đầu lúc mẹ về trên,cô hợp bắt đầu lúc mẹ về trên.,cô hợp bắt đầu lúc mẹ về trên.,0.625,0.625,0.625,0.4242,0.339
+sample_06.wav,tôi không hiểu tại sao nó bị lỗi,đây không hu climbing h종a bên standing,đây không hu climbing h종a bên standing.,đây không phải là climbing hoàn hảo bên standing.,0.875,0.875,1.0,0.75,3.902
+sample_07.wav,hôm nay tôi cần hoàn thành báo cáo,hôm nay tôi còn hoàn thành báo cá quá,hôm nay tôi còn hoàn thành báo cá quá.,"hôm nay, tôi còn hoàn thành báo cáo quá.",0.375,0.375,0.375,0.1471,0.491
+sample_08.wav,mô hình học máy cần nhiều dữ liệu,bố hành hợp máy công như giữa lệ ớt,bố hành hợp máy công như giữa lệ ớt.,bố hành hợp máy công như giữa lệ ớt.,1.0,1.0,1.0,0.5152,0.363
+sample_09.wav,ứng dụng này bảo vệ quyền riêng tư,escucha when chengzi're in abu,escucha when chengzi're in abu.,listen when chengzi is in abu.,1.0,1.0,1.0,0.8824,5.036
+sample_10.wav,kết quả thử nghiệm rất khả quan,ta to rubber to l,ta to rubber to l.,ta to rubber to l.,1.0,1.0,1.0,0.7742,2.866

@@ -1,0 +1,18 @@
+.env
+venv/
+venv311_fixed/
+__pycache__/
+*.pyc
+# Audio files
+raw_audio/
+recordings/
+test_cases/clean/*.wav
+test_cases/noisy/*.wav
+
+# Test scripts tạm
+test_phase1.py
+test_phase2.py
+test_phase3.py
+test_phase3b.py
+test_phase3c.py
+test_phase4.py

@@ -1,0 +1,122 @@
+[
+  {
+    "file": "sample_01.wav",
+    "reference": "xin chào hôm nay trời đẹp quá",
+    "raw_text": "xin chào, hôm nay rồi đẹp quá",
+    "cleaned_rule": "xin chào, hôm nay rồi đẹp quá.",
+    "cleaned_gemma": "xin chào, hôm nay trời đẹp quá!",
+    "wer_raw": 0.2857,
+    "wer_rule": 0.4286,
+    "wer_gemma": 0.2857,
+    "cer_raw": 0.1034,
+    "latency_s": 0.842
+  },
+  {
+    "file": "sample_02.wav",
+    "reference": "tôi đang học lập trình python",
+    "raw_text": "tôi đang hảo bệnh bài phân",
+    "cleaned_rule": "tôi đang hảo bệnh bài phân.",
+    "cleaned_gemma": "tôi đang hảo bệnh bài phân.",
+    "wer_raw": 0.6667,
+    "wer_rule": 0.6667,
+    "wer_gemma": 0.6667,
+    "cer_raw": 0.4828,
+    "latency_s": 0.358
+  },
+  {
+    "file": "sample_03.wav",
+    "reference": "dự án này chạy hoàn toàn offline",
+    "raw_text": "nhử n 번째 hoàn tình off like citor",
+    "cleaned_rule": "nhử n 번째 hoàn tình off like citor.",
+    "cleaned_gemma": "như n 번째 hoàn thành off like visitor.",
+    "wer_raw": 1.1429,
+    "wer_rule": 1.1429,
+    "wer_gemma": 1.1429,
+    "cer_raw": 0.6875,
+    "latency_s": 3.269
+  },
+  {
+    "file": "sample_04.wav",
+    "reference": "hệ thống nhận dạng giọng nói tiếng việt",
+    "raw_text": "h<|vi|> d 1920",
+    "cleaned_rule": "h<|vi|> d 1920.",
+    "cleaned_gemma": "hôm nay là 19 tháng 20.",
+    "wer_raw": 1.0,
+    "wer_rule": 1.0,
+    "wer_gemma": 1.0,
+    "cer_raw": 0.8974,
+    "latency_s": 10.475
+  },
+  {
+    "file": "sample_05.wav",
+    "reference": "cuộc họp bắt đầu lúc ba giờ chiều",
+    "raw_text": "cô hả pắc đào lúc bây giờ chíu.",
+    "cleaned_rule": "cô hả pắc đào lúc bây giờ chíu.",
+    "cleaned_gemma": "cô park dao lúc bây giờ chiếu.",
+    "wer_raw": 0.75,
+    "wer_rule": 0.75,
+    "wer_gemma": 0.75,
+    "cer_raw": 0.4242,
+    "latency_s": 0.418
+  },
+  {
+    "file": "sample_06.wav",
+    "reference": "tôi không hiểu tại sao nó bị lỗi",
+    "raw_text": "tôi không hiểu tại sao nó bị lỗi",
+    "cleaned_rule": "tôi không hiểu tại sao nó bị lỗi.",
+    "cleaned_gemma": "tôi không hiểu tại sao nó bị lỗi.",
+    "wer_raw": 0.0,
+    "wer_rule": 0.125,
+    "wer_gemma": 0.125,
+    "cer_raw": 0.0,
+    "latency_s": 0.341
+  },
+  {
+    "file": "sample_07.wav",
+    "reference": "hôm nay tôi cần hoàn thành báo cáo",
+    "raw_text": "hôm nay tôi cần hành thành báo cáo",
+    "cleaned_rule": "hôm nay tôi cần hành thành báo cáo.",
+    "cleaned_gemma": "hôm nay, tôi cần hành thành báo cáo.",
+    "wer_raw": 0.125,
+    "wer_rule": 0.25,
+    "wer_gemma": 0.375,
+    "cer_raw": 0.0588,
+    "latency_s": 0.675
+  },
+  {
+    "file": "sample_08.wav",
+    "reference": "mô hình học máy cần nhiều dữ liệu",
+    "raw_text": "mô hình học máy cần như vậy lửa",
+    "cleaned_rule": "mô hình học máy cần như vậy lửa.",
+    "cleaned_gemma": "mô hình học máy cần như vậy lửa.",
+    "wer_raw": 0.375,
+    "wer_rule": 0.375,
+    "wer_gemma": 0.375,
+    "cer_raw": 0.2727,
+    "latency_s": 0.729
+  },
+  {
+    "file": "sample_09.wav",
+    "reference": "ứng dụng này bảo vệ quyền riêng tư",
+    "raw_text": "có những nàyumental dạy rowoon",
+    "cleaned_rule": "có những nàyumental dạy rowoon.",
+    "cleaned_gemma": "có nhữngumental dạy rowoon.",
+    "wer_raw": 1.0,
+    "wer_rule": 1.0,
+    "wer_gemma": 1.0,
+    "cer_raw": 0.7059,
+    "latency_s": 3.661
+  },
+  {
+    "file": "sample_10.wav",
+    "reference": "kết quả thử nghiệm rất khả quan",
+    "raw_text": "g gallery th і nầ music à 외",
+    "cleaned_rule": "g gallery th і nầ music 외.",
+    "cleaned_gemma": "g gallery thin music ạ 외.",
+    "wer_raw": 1.1429,
+    "wer_rule": 1.0,
+    "wer_gemma": 1.0,
+    "cer_raw": 0.8387,
+    "latency_s": 9.779
+  }
+]
