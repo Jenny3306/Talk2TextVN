@@ -135,7 +135,7 @@ Evaluated on 20 real-world Vietnamese audio samples (10 clean, 10 noisy).
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
-| Speech Recognition | Whisper Base | Vietnamese STT, on-device |
+| Speech Recognition | Whisper Tiny | Vietnamese STT, on-device |
 | Text Normalization | Rule-based module | Fast, zero-latency baseline |
 | Text Normalization | Gemma 3n (Google AI API) | Semantic understanding |
 | Text Normalization | Gemma 3n (Ollama) | Fully offline inference |
@@ -209,7 +209,7 @@ talk2textvn/
 
 Edit `config.py` to adjust pipeline behavior:
 ```python
-WHISPER_MODEL = "base"    # Options: tiny, base, small, medium, large
+WHISPER_MODEL = "tiny"    # Other options: base, small, medium, large for upgrading
 LANGUAGE = "vi"
 SAMPLE_RATE = 16000
 RECORD_SECONDS = 10
