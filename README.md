@@ -1,15 +1,3 @@
----
-title: Talk2TextVN
-emoji: 🎙️
-colorFrom: blue
-colorTo: purple
-sdk: streamlit
-sdk_version: "1.55.0"
-python_version: "3.11"
-app_file: app.py
-pinned: false
----
-
 # 🎙️ Talk2TextVN
 
 > An offline Vietnamese speech recognition pipeline combining Whisper-based transcription with Gemma 3n post-processing for punctuation restoration, text normalization, and improved readability.
