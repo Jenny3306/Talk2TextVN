@@ -16,3 +16,5 @@ test_phase3.py
 test_phase3b.py
 test_phase3c.py
 test_phase4.py
+
+.gitattributes
