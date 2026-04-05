@@ -18,6 +18,11 @@ pinned: false
 [![Whisper](https://img.shields.io/badge/Whisper-Tiny-purple)](https://github.com/openai/whisper)
 [![Gemma](https://img.shields.io/badge/Gemma-3n-orange)](https://ai.google.dev)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Hugging Face](https://img.shields.io/badge/Demo-HuggingFace-yellow)](https://huggingface.co/spaces/LeeUyen06/Talk2TextVN)
+
+## 🚀 Live Demo
+
+👉 [Try it on Hugging Face Spaces](https://huggingface.co/spaces/LeeUyen06/Talk2TextVN)
 
 ---
 
