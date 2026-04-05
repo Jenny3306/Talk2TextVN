@@ -21,7 +21,7 @@ st.caption("Offline Vietnamese Speech-to-Text · Powered by Whisper + Gemma 3n")
 # ── Sidebar settings ───────────────────────────────────────────
 with st.sidebar:
     st.header("⚙️ Cài đặt")
-    duration = st.slider("Thời gian ghi âm (giây)", 3, 15, 5)
+    duration = st.slider("Thời gian ghi âm (giây)", 3, 15, 8)
     method = st.radio(
         "Phương pháp post-processing",
         ["Rule-based", "Gemma API", "Gemma Local (Ollama)"],
@@ -29,7 +29,7 @@ with st.sidebar:
     )
     st.divider()
     st.markdown("**Thông tin model:**")
-    st.markdown("- STT: Whisper Tiny")
+    st.markdown("- STT: Whisper Base")
     st.markdown("- NLP: Gemma 3n")
     st.markdown("- Mode: Offline")
 
@@ -39,16 +39,21 @@ tab1, tab2 = st.tabs(["🎤 Ghi âm trực tiếp", "📁 Upload file"])
 # Tab 1: Ghi âm
 with tab1:
     st.markdown("Nhấn nút bên dưới để bắt đầu ghi âm tiếng Việt.")
+    
+    from audiorecorder import audiorecorder
+    audio = audiorecorder("🔴 Bắt đầu ghi âm", "⏹️ Dừng ghi âm")
 
-    if st.button("🔴 Bắt đầu ghi âm", type="primary", use_container_width=True):
-        with st.spinner(f"Đang ghi âm {duration} giây..."):
-            audio_path = record_audio(duration=duration)
+    if len(audio) > 0:
+        # Lưu file tạm
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp:
+            audio.export(tmp.name, format="wav")
+            tmp_path = tmp.name
 
-        st.audio(audio_path)
+        st.audio(tmp.name)
         st.success("Ghi âm xong!")
 
         with st.spinner("Đang nhận dạng giọng nói..."):
-            audio_data = preprocess(audio_path)
+            audio_data = preprocess(tmp_path)
             result = transcribe(audio_data)
 
         with st.spinner("Đang chuẩn hóa văn bản..."):
@@ -56,7 +61,6 @@ with tab1:
             use_local = method == "Gemma Local (Ollama)"
             post = postprocess(result["raw_text"], use_gemma=use_gemma, use_local=use_local)
 
-        # Hiển thị kết quả
         st.divider()
         col1, col2, col3 = st.columns(3)
         col1.metric("⏱️ Latency", f"{result['latency_s']}s")
@@ -69,8 +73,9 @@ with tab1:
         st.markdown("**✨ Cleaned text (sau post-processing):**")
         st.success(post["cleaned_text"] if post["cleaned_text"] else "_(trống)_")
 
-        # Copy button
         st.code(post["cleaned_text"], language=None)
+
+        os.unlink(tmp_path)
 
 # Tab 2: Upload file
 with tab2:

@@ -1,7 +1,7 @@
 # config.py
 
 # Model Whisper: "tiny" (nhanh nhất), "base", "small", "medium", "large"
-WHISPER_MODEL = "tiny"
+WHISPER_MODEL = "base"
 
 # Ngôn ngữ
 LANGUAGE = "vi"
@@ -9,7 +9,7 @@ LANGUAGE = "vi"
 # Audio settings
 SAMPLE_RATE = 16000      # Hz, Whisper yêu cầu 16kHz
 CHANNELS = 1             # Mono
-RECORD_SECONDS = 10      # Thời gian ghi âm mặc định
+RECORD_SECONDS = 8      # Thời gian ghi âm mặc định
 
 # Text post-processing
 ENABLE_PUNCTUATION = True

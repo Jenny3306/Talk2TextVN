@@ -31,7 +31,7 @@ def normalize_audio(audio_data: np.ndarray) -> np.ndarray:
     return audio_float / max_val
 
 
-def trim_silence(audio_data: np.ndarray, threshold: float = 0.01) -> np.ndarray:
+def trim_silence(audio_data: np.ndarray, threshold: float = 0.001) -> np.ndarray:
     """
     Cắt bỏ khoảng im lặng ở đầu và cuối file audio.
     - threshold: ngưỡng biên độ coi là im lặng (0.0 - 1.0)
@@ -58,17 +58,23 @@ def preprocess(file_path: str) -> np.ndarray:
     # 1. Load file
     orig_rate, audio_data = wav.read(file_path)
     
-    # 2. Convert stereo → mono nếu cần
+    # 2. Convert int32 → int16 nếu cần
+    if audio_data.dtype == np.int32:
+        audio_data = (audio_data / 65536).astype(np.int16)
+    elif audio_data.dtype == np.float64:
+        audio_data = (audio_data * 32767).astype(np.int16)
+
+    # 3. Convert stereo → mono nếu cần
     if len(audio_data.shape) == 2:
         audio_data = audio_data.mean(axis=1).astype(np.int16)
     
-    # 3. Resample về 16kHz
+    # 4. Resample về 16kHz
     audio_data = resample_audio(audio_data, orig_rate)
     
-    # 4. Cắt im lặng
-    audio_data = trim_silence(audio_data)
+    # 5. Cắt im lặng
+    # audio_data = trim_silence(audio_data)
     
-    # 5. Normalize về float32
+    # 6. Normalize về float32
     audio_data = normalize_audio(audio_data)
     
     duration = len(audio_data) / SAMPLE_RATE

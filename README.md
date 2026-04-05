@@ -88,6 +88,8 @@ Evaluated on 20 real-world Vietnamese audio samples (10 clean, 10 noisy).
 | Noisy     | 0.78    | 0.55    | 2.60s       |
 | Noise degradation | +20.3% | — | — |
 
+> Note: Benchmark data collected with Whisper Tiny. Upgraded to Whisper Base for improved accuracy, especially with proper nouns and Vietnamese-specific vocabulary.
+
 ### Post-processing Comparison
 
 | Method | WER (clean) | WER (noisy) | Avg Latency |
@@ -133,7 +135,7 @@ Evaluated on 20 real-world Vietnamese audio samples (10 clean, 10 noisy).
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
-| Speech Recognition | Whisper Tiny | Vietnamese STT, on-device |
+| Speech Recognition | Whisper Base | Vietnamese STT, on-device |
 | Text Normalization | Rule-based module | Fast, zero-latency baseline |
 | Text Normalization | Gemma 3n (Google AI API) | Semantic understanding |
 | Text Normalization | Gemma 3n (Ollama) | Fully offline inference |
@@ -207,7 +209,7 @@ talk2textvn/
 
 Edit `config.py` to adjust pipeline behavior:
 ```python
-WHISPER_MODEL = "tiny"    # Options: tiny, base, small, medium, large
+WHISPER_MODEL = "base"    # Options: tiny, base, small, medium, large
 LANGUAGE = "vi"
 SAMPLE_RATE = 16000
 RECORD_SECONDS = 10
@@ -225,6 +227,12 @@ ENABLE_FILLER_REMOVAL = True
 - **Technical terms** (Python, offline, ML) often misrecognized in Vietnamese context
 - **Gemma API** requires internet connection — not fully offline
 - **Gemma Local** requires 8GB+ RAM and significant warmup time on first run
+- **int32 audio format** from some recording apps requires extra prep
+
+### After upgrading to Whisper Base:
+
+- **Whisper Base** requires ~6s latency on CPU — not suitable for real-time use cases
+- **Proper nouns** (names, places) may still be misrecognized without fine-tuning on Vietnamese data
 
 ---
 

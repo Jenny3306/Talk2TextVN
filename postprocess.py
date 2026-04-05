@@ -180,6 +180,14 @@ def postprocess(raw_text: str, use_gemma: bool = False, use_local: bool = False)
     - use_local=True  : dùng Gemma on-device qua Ollama (offline)
     - mặc định        : rule-based
     """
+    # Nếu raw text rỗng → không cần xử lý gì
+    if not raw_text or raw_text.strip() == "":
+        return {
+            "raw_text": raw_text,
+            "cleaned_text": "",
+            "method": "none"
+        }
+    
     if use_local:
         cleaned_text = normalize_with_gemma_local(raw_text)
         method = "gemma-local"
