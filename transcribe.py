@@ -36,10 +36,18 @@ def transcribe(audio_input, model_name: str = WHISPER_MODEL) -> dict:
     print("Đang nhận dạng giọng nói...")
     start_time = time.time()
 
+    # Prompt giúp Whisper hiểu context tiếng Việt tốt hơn
+    initial_prompt = (
+        "Đây là đoạn hội thoại tiếng Việt thông thường. "
+        "Người nói có thể đề cập đến công nghệ, lập trình, "
+        "trí tuệ nhân tạo, học máy, và các chủ đề hàng ngày."
+    )
+
     result = model.transcribe(
         audio_input,
         language=LANGUAGE,
-        verbose=False       # Tắt log chi tiết của Whisper
+        verbose=False,              # Tắt log chi tiết của Whisper
+        initial_prompt=initial_prompt
     )
 
     latency = round(time.time() - start_time, 3)

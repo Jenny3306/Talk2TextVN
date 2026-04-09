@@ -49,7 +49,7 @@ def trim_silence(audio_data: np.ndarray, threshold: float = 0.001) -> np.ndarray
     return audio_data[start:end]
 
 
-def preprocess(file_path: str) -> np.ndarray:
+def preprocess(file_path: str, denoise: bool = True) -> np.ndarray:
     """
     Pipeline tiền xử lý đầy đủ cho một file audio.
     Chạy theo thứ tự: load → resample → trim silence → normalize
@@ -76,6 +76,11 @@ def preprocess(file_path: str) -> np.ndarray:
     
     # 6. Normalize về float32
     audio_data = normalize_audio(audio_data)
+
+    # 7. Noise reduction (chỉ áp dụng nếu denoise=True)
+    # if denoise:
+    #    print("Đang giảm tiếng ồn...")
+    #    audio_data = reduce_noise(audio_data)
     
     duration = len(audio_data) / SAMPLE_RATE
     print(f"Preprocess xong | Duration sau xử lý: {duration:.2f}s")
