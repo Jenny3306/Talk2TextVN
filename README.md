@@ -3,7 +3,7 @@
 > An offline Vietnamese speech recognition pipeline combining Whisper-based transcription with Gemma 3n post-processing for punctuation restoration, text normalization, and improved readability.
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue)](https://python.org)
-[![Whisper](https://img.shields.io/badge/Whisper-Tiny-purple)](https://github.com/openai/whisper)
+[![Whisper](https://img.shields.io/badge/Whisper-Base-purple)](https://github.com/openai/whisper)
 [![Gemma](https://img.shields.io/badge/Gemma-3n-orange)](https://ai.google.dev)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Hugging Face](https://img.shields.io/badge/Demo-HuggingFace-yellow)](https://huggingface.co/spaces/LeeUyen06/Talk2TextVN)
@@ -33,7 +33,7 @@ Audio Capture → Preprocessing → Whisper STT → Text Normalization → Evalu
 **Pipeline stages:**
 1. **Audio Capture** — Record from microphone or load file (.wav, .mp3, .m4a)
 2. **Preprocessing** — Resample to 16kHz, convert to mono, trim silence, normalize to float32
-3. **Whisper STT** — Transcribe Vietnamese speech using Whisper Tiny (on-device)
+3. **Whisper STT** — Transcribe Vietnamese speech using Whisper Base with Vietnamese prompt engineering (on-device)
 4. **Text Normalization** — Three methods: rule-based, Gemma API, Gemma on-device (Ollama)
 5. **Evaluation** — WER/CER measurement, latency logging, error analysis
 6. **Demo UI** — Streamlit interface with real-time transcription
@@ -93,8 +93,7 @@ Evaluated on 20 real-world Vietnamese audio samples (10 clean, 10 noisy).
 | Noisy     | 0.78    | 0.55    | 2.60s       |
 | Noise degradation | +20.3% | — | — |
 
-> Note: Benchmark data collected with Whisper Tiny. Upgraded to Whisper Base for improved accuracy, especially with proper nouns and Vietnamese-specific vocabulary.
-
+> Note: Benchmark data collected with Whisper Tiny. Upgraded to Whisper Base with Vietnamese initial_prompt engineering, improving WER on clean speech (e.g. 0.43 → 0.29 on select samples).
 ### Post-processing Comparison
 
 | Method | WER (clean) | WER (noisy) | Avg Latency |
@@ -140,7 +139,8 @@ Evaluated on 20 real-world Vietnamese audio samples (10 clean, 10 noisy).
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
-| Speech Recognition | Whisper Tiny | Vietnamese STT, on-device |
+| Speech Recognition | Whisper Base | Vietnamese STT, on-device |
+| Prompt Engineering | Whisper initial_prompt | Vietnamese context hint for improved recognition |
 | Text Normalization | Rule-based module | Fast, zero-latency baseline |
 | Text Normalization | Gemma 3n (Google AI API) | Semantic understanding |
 | Text Normalization | Gemma 3n (Ollama) | Fully offline inference |
@@ -214,7 +214,7 @@ talk2textvn/
 
 Edit `config.py` to adjust pipeline behavior:
 ```python
-WHISPER_MODEL = "tiny"    # Other options: base, small, medium, large for upgrading
+WHISPER_MODEL = "base"    # Other options: base, small, medium, large for upgrading
 LANGUAGE = "vi"
 SAMPLE_RATE = 16000
 RECORD_SECONDS = 10
@@ -243,8 +243,8 @@ ENABLE_FILLER_REMOVAL = True
 
 ## 🔮 Future Work
 
-- Upgrade to Whisper Base/Small for better accuracy
-- Fine-tune Whisper on Vietnamese dataset (Common Voice VI)
+- Evaluate stationary noise reduction for specific acoustic environments (fan, AC noise)
+- Fine-tune Whisper Base on Vietnamese dataset (Common Voice VI) for further WER improvement
 - Add speaker diarization for multi-speaker scenarios
 - Extend to speech-to-structured notes
 - Build voice input for AI assistant integration
